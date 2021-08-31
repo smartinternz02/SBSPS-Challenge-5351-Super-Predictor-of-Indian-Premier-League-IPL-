@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+<div>
+
+    <h1 style="text-align:center;"><b>{{ team }}</b> matches in <b>{{ season }}</b></h1>
+
+    {% for matches in as_team1_matches %}
+
+    {% if matches[4]==matches[10] %}
+        <div class="matchDetailCard won-card">
+    {% else %}
+        <div class="matchDetailCard lost-card">
+    {% endif %}
+            <div>
+
+                <h2>vs</h2>
+                <h1>{{ matches[5] }}</h1>
+                <h2 class="match-date">{{ matches[3] }}</h2>
+                <h3 class="match-venue">{{ matches[14] }}</h3>
+                <h3 class="match-result">{{ matches[10] }} won by {% if matches[11]==0 %} {{ matches[12] }} wickets {% else %} {{ matches[11] }} runs {%endif%}</h4>
+            </div>
+
+            <div class="additional-detail">
+
+                <h3>First Innings</h3>
+                <p>{{ matches[4]}}</p>
+
+                <h3>Second Innings</h3>
+                <p>{{ matches[5] }}</p>
+
+                <h3>Man of the Match</h3>
+                <p>{{ matches[13] }}</p>
+
+                <h3>Umpires</h3>
+                <p>{{ matches[15] }},{{ matches[16] }}</p>
+
+            </div>
+        </div>
+    {% endfor %}
+
+    {% for matches in as_team2_matches %}
+
+    {% if matches[5]==matches[10] %}
+        <div class="matchDetailCard won-card">
+    {% else %}
+        <div class="matchDetailCard lost-card">
+    {% endif %}
+            <div>
+
+                <h2>vs</h2>
+                <h1>{{ matches[4] }}</h1>
+                <h2 class="match-date">{{ matches[3] }}</h2>
+                <h3 class="match-venue">{{ matches[14] }}</h3>
+                <h3 class="match-result">
+                    {{ matches[10] }} won by {% if matches[11]==0 %} {{ matches[12] }} wickets {% else %} {{ matches[11] }} runs {% endif %}
+
+                </h3>
+            </div>
+
+            <div class="additional-detail">
+
+                <h3>First Innings</h3>
+                <p>{{ matches[4]}}</p>
+
+                <h3>Second Innings</h3>
+                <p>{{ matches[5] }}</p>
+
+                <h3>Man of the Match</h3>
+                <p>{{ matches[13] }}</p>
+
+                <h3>Umpires</h3>
+                <p>{{ matches[15] }},{{ matches[16] }}</p>
+
+            </div>
+        </div>
+</div>
+{% endfor %}
+
+
+
+
+
+{% endblock %}
