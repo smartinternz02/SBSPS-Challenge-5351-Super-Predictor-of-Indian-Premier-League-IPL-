@@ -1,0 +1,115 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<div id="particles-js">
+</div>
+
+<h1 style="text-align:center;">First Innings Score Predictor</h1>
+    
+    <div class="prediction-area">
+
+        <div class="ipl-banner-left">
+
+            <div class="slider">
+
+                <div class="slider-upwards">
+                    
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/csk.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/rcb.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/mi.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/dc.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/kxip.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/kkr.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/srh.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/rr.jpeg')}}"/>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="results">
+            <p>The score predicted is {{ lower_range }} to {{ upper_range }}.</p>
+        </div>
+
+
+
+        <div class="ipl-banner-right">
+
+            <div class="slider">
+
+                <div class="slider-downwards">
+                    
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/csk.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/rcb.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/mi.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/dc.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/kxip.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/kkr.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/srh.jpeg')}}"/>
+                    </div>
+
+                    <div class="image-container">
+                        <img class="custom-image-width" src="{{ url_for('static',filename='img/rr.jpeg')}}"/>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+            
+
+
+    </div>
+
+
+{% endblock %}

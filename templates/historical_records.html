@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+<div id="particles-js">
+</div>
+
+<div class="historical-page">
+    <div class="historical-container">
+        <div class="historical-left">
+            <div class="historical-title">Historical Records</div>
+            <div class="historical-instructions">Select the team and year.</div>
+        </div>
+        <div class="historical-right">
+            <svg viewBox="0 0 320 300">
+                <defs>
+                    <linearGradient
+                            inkscape:collect="always"
+                            id="linearGradient"
+                            x1="13"
+                            y1="193.49992"
+                            x2="307"
+                            y2="193.49992"
+                            gradientUnits="userSpaceOnUse">
+                        <stop
+                                style="stop-color:#ff00ff;"
+                                offset="0"
+                                id="stop876" />
+                        <stop
+                                style="stop-color:#ff0000;"
+                                offset="1"
+                                id="stop878" />
+                    </linearGradient>
+                </defs>
+                <path d="m 40,120.00016 239.99984,-3.2e-4 c 0,0 24.99263,0.79932 25.00016,35.00016 0.008,34.20084 -25.00016,35 -25.00016,35 h -239.99984 c 0,-0.0205 -25,4.01348 -25,38.5 0,34.48652 25,38.5 25,38.5 h 215 c 0,0 20,-0.99604 20,-25 0,-24.00396 -20,-25 -20,-25 h -190 c 0,0 -20,1.71033 -20,25 0,24.00396 20,25 20,25 h 168.57143" />
+            </svg>
+            <form method="POST" action="/redirectTeams">
+
+            <div class="historical-form">
+                <label for="team">Choose a team:</label>
+
+                <select name="team" id="team">
+                    <option value="Chennai Super Kings">Chennai Super Kings</option>
+                    <option value="Kings XI Punjab">Kings XI Punjab</option>
+                    <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                    <option value="Mumbai Indians">Mumbai Indians</option>
+                    <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                    <option value="Delhi Capitals">Delhi Capitals</option>
+                    <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    <option value="Rajasthan Royals">Rajasthan Royals</option>
+        
+        
+                    <option value="Delhi Daredevils">Delhi Daredevils</option>
+                    <option value="Deccan Chargers">Deccan Chargers</option>
+                    <option value="Gujarat Lions">Gujarat Lions</option>
+                    <option value="Rising Pune Supergiants">Rising Pune Supergiants</option>
+                </select>
+        
+                <label for="year">Choose a year(season):</label>
+        
+                <select name="year" id="year">
+                    <option value="2019">2019</option>
+                    <option value="2018">2018</option>
+                    <option value="2017">2017</option>
+                    <option value="2016">2016</option>
+                    <option value="2015">2015</option>
+                    <option value="2014">2014</option>
+                    <option value="2013">2013</option>
+                    <option value="2012">2012</option>
+                    <option value="2011">2011</option>
+                    <option value="2010">2010</option>
+                    <option value="2009">2009</option>
+                    <option value="2008">2008</option>
+                </select>
+            <input type="submit" name="submit" id="submit" value="Submit"/>
+            <form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+{% endblock %}
