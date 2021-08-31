@@ -282,7 +282,7 @@ input::-moz-focus-inner {
 }
 
 select {
-   background: transparent;
+   background: #474A59;
    border: 0;
    color: #f2f2f2;
    font-size: 20px;
